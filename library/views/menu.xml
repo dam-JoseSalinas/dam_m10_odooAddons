@@ -1,0 +1,34 @@
+<odoo>
+  <data>
+    <menuitem
+      name="Library JS"
+      id="library.menu_root"/>
+    
+    <menuitem 
+      id="library.menu_1"
+      name="Books"
+      parent="library.menu_root"/>
+    <menuitem 
+      id="library.menu_1_list"
+      name="Book"
+      parent="library.menu_1"
+      action="library.book_action"/>
+
+    <menuitem 
+      id="library.menu_2"
+      name="Loans"
+      parent="library.menu_root"/>
+
+    <menuitem 
+      id="library.menu_2_list"
+      name="Member"
+      parent="library.menu_2"
+      action="library.member_action"/>
+
+    <menuitem 
+      id="library.menu_3_list"
+      name="Loan"
+      parent="library.menu_2"
+      action="library.loan_action"/>
+  </data>
+</odoo>

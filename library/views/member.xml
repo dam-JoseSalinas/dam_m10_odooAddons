@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+  <!--ACTION-->
+    <record model="ir.actions.act_window" id="library.member_action">
+      <field name="name">Members</field>
+      <field name="res_model">library.member</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+  <!--TREE-->
+    <record model="ir.ui.view" id="library.member_list">
+      <field name="name">library member list</field>
+      <field name="model">library.member</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="email"/>
+        </tree>
+      </field>
+    </record>
+    <!--FORM-->
+    <record  model="ir.ui.view" id="library.member_form">
+      <field name="name">library member form</field>
+      <field name="model">library.member</field>
+      <field name="arch" type="xml">
+          <form string="Member form">
+              <sheet>
+                <group>
+                  <field name="name"/>
+                  <field name="email"/>
+                </group>
+                <separator string="Prestamos del miembro"/>
+                <field name="loan_ids">
+                  <tree>
+                    <field name="name"/>
+                    <field name="loan_date"/>
+                    <field name="return_date"/>
+                    <field name="member_id"/>
+                  </tree>
+                </field>
+              </sheet>
+          </form>
+      </field>
+    </record>
+  </data>
+</odoo>

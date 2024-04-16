@@ -1,0 +1,66 @@
+<odoo>
+  <data>
+    <!--ACTION-->
+    <record model="ir.actions.act_window" id="library.book_action">
+      <field name="name">Books</field>
+      <field name="res_model">library.book</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <!--TREE-->
+    <record model="ir.ui.view" id="library.book_list">
+      <field name="name">library book list</field>
+      <field name="model">library.book</field>
+      <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+            <field name="author"/>
+            <field name="editorial"/>
+            <field name="loan_ids" invisible="1"/>
+          </tree>
+      </field>
+    </record>
+    <!--FORM-->
+    <record  model="ir.ui.view" id="library.book_form">
+      <field name="name">library book form</field>
+      <field name="model">library.book</field>
+      
+      <field name="arch" type="xml">
+        <form string="Book form">
+          <sheet> 
+            <group name="G1">
+              <field name="name"/>
+              <group name="G1A"> 
+                  <separator string="Información general"/>
+                  <field name="author" />
+                  <field name="editorial" />    
+              </group>
+              <group name="G1B"> 
+                  <separator string="Mas informacion"/>
+                  <field name="isbn"/>
+                  <field name="year"/>
+                  <field name="category"/>
+                  <field name="pages"/>
+              </group>
+            </group>
+            
+            <separator string="Prestamos hechos"/>
+        
+            <field name="loan_ids">
+              <tree>
+                <field name="name"/>
+                <field name="book_id"/>
+                <field name="member_id"/>
+                <field name="loan_date"/>
+                <field name="return_date"/>
+                
+              </tree>
+            </field>
+          
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    
+  </data>
+</odoo>
