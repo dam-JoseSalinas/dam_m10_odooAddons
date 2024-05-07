@@ -1,0 +1,30 @@
+<odoo>
+  <record model="ir.ui.view" id="infomusicplus.disk_list">
+    <field name="name">Disk List</field>
+    <field name="model">infomusic.disk</field>
+    <field name="inherit_id" ref="infomusic.disk_list"/>
+    <field name="arch" type="xml">
+      <xpath expr="//tree//field[2]" position="after">
+        <field name="genre"/>
+        <field name="cover" widget="image" options="{'size': (150, 150)}"/>
+        <field name="nbr_of_songs"/>
+      </xpath>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="infomusicplus.disk_form">
+    <field name="name">Disk Form</field>
+    <field name="model">infomusic.disk</field>
+    <field name="inherit_id" ref="infomusic.disk_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//form//sheet//group//field[2]" position="after">
+        <field name="genre"/>
+        <field name="cover" widget="image" options="{'size': (150, 150)}"/>
+        <field name="nbr_of_songs" attr="{'readonly': True}"/>
+      </xpath>
+      <xpath expr="//form//sheet//field[@name='singer_ids']//tree" position="inside">
+        <field name="country_of_birth"/>
+        <field name="photo" widget="image" options="{'size': (150, 150)}"/>
+      </xpath>
+    </field>
+  </record>
+</odoo>

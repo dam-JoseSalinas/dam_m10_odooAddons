@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_infomusic_singer,infomusic.singer,model_infomusic_singer,base.group_user,1,1,1,1
+access_infomusic_disk,infomusic.disk,model_infomusic_disk,base.group_user,1,1,1,1
+access_infomusic_song,infomusic.song,model_infomusic_song,base.group_user,1,1,1,1

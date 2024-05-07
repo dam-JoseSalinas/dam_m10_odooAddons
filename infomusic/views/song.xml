@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <!--ACTION-->
+    <record model="ir.actions.act_window" id="infomusic.songs_view">
+      <field name="name">Song Action</field>
+      <field name="res_model">infomusic.song</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <!--TREE-->
+    <record model="ir.ui.view" id="infomusic.song_list">
+      <field name="name">Song List</field>
+      <field name="model">infomusic.song</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="order"/>
+          <field name="duration" widget="float_time"/>
+          
+        </tree>
+      </field>
+    </record>
+    <!--FORM-->
+    <record  model="ir.ui.view" id="infomusic.song_form">
+      <field name="name">Song Form</field>
+      <field name="model">infomusic.song</field>
+      <field name="arch" type="xml">
+        <form string="singer form">
+            <sheet>
+              <group name="S1">
+                <field name="name"/>
+                <field name="order"/>
+                <field name="duration" widget="float_time"/>
+              </group>
+              <separator string="Disco de la cancion"/>
+              <field name="disk_id">
+                <tree>
+                  <field name="name"/>
+                  <field name="publish_date"/>
+                </tree>
+              </field>
+            </sheet>
+        </form>      
+      </field>
+    </record>    
+  </data>
+</odoo>

@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <menuitem
+      id="infomusic.menu_root"
+      name="Infomusic JS"/>
+    
+    <menuitem
+      id="infomusic.menu_1"
+      name="Music"
+      parent="infomusic.menu_root"/>
+      
+    <menuitem 
+      id="infomusic.menu_1_list_1"
+      name="Disks"
+      parent="infomusic.menu_1"
+      action="infomusic.disks_view"/>
+    <menuitem 
+      id="infomusic.menu_1_list_2"
+      name="Singers"
+      parent="infomusic.menu_1"
+      action="infomusic.singers_view"/>
+  </data>
+</odoo>

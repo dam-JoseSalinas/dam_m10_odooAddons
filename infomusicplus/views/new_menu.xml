@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <menuitem
+      id="infomusic.menu_root"
+      name="Infomusic+ JS"/>
+    <menuitem
+      id="infomusicplus.menu_2"
+      name="Tours"
+      parent="infomusic.menu_root"/>
+    <menuitem 
+      id="infomusicplus.menu_2_list_1"
+      name="Tour"
+      parent="infomusicplus.menu_2"
+      action="infomusicplus.tour_action_view"/>
+    <menuitem 
+      id="infomusicplus.menu_2_list_2"
+      name="City"
+      parent="infomusicplus.menu_2"
+      action="infomusicplus.tour_city_view"/>
+    
+
+  </data>
+</odoo>

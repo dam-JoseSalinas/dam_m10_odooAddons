@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="infomusicplus.tour_list">
+      <field name="name">Tour List</field>
+      <field name="model">infomusicplus.tour</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="singer_id"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record  model="ir.ui.view" id="infomusicplus.tour_form">
+      <field name="name">Tour Form</field>
+      <field name="model">infomusicplus.tour</field>
+      <field name="arch" type="xml">
+        <form string="Tour form">
+            <header>
+              <button name="onclick_done" type="object" string="DONE"/>
+              <button name="onclick_cancel" type="object" string="CANCEL"/>
+              <field name="state" widget="statusbar" statusbar_visible="s1,s2,s3,s4" attr="{'readonly': True}"/>
+            </header>
+            <sheet>
+              <group name="T1">
+                <field name="name"/>
+                <field name="singer_id" string="cantante del disco"/>
+              </group>
+              
+              <separator string="Ciudades de la gira"/>
+              <field name="tour_city_ids">
+                <tree>
+                  <field name="name"/>
+                  <field name="country_id"/>
+                  <field name="date"/>
+                  <field name="tour_id"/>
+                  <field name="confirmed"/>
+                </tree>
+              </field>
+            </sheet>
+        </form>      
+      </field>
+    </record> 
+    <record model="ir.actions.act_window" id="infomusicplus.tour_action_view">
+      <field name="name">Tour Action</field>
+      <field name="res_model">infomusicplus.tour</field>
+      <field name="view_mode">tree,form</field>
+    </record>   
+
+  </data>
+</odoo>
