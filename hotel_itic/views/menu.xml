@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+    <menuitem
+      id="hotel_itic.menu_root"
+      name="Hotel JS"/>
+    
+    <menuitem
+      id="hotel_itic.menu_1"
+      name="Habitacions"
+      parent="hotel_itic.menu_root"/>
+      
+    <menuitem 
+      id="hotel_itic.menu_1_list_1"
+      name="Habitacions"
+      parent="hotel_itic.menu_1"
+      action="hotel_itic.room_action"/>
+  </data>
+</odoo>

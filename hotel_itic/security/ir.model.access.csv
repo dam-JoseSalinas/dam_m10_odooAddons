@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hotel_itic_room,hotel_itic.room,model_hotel_itic_room,base.group_user,1,1,1,1
+access_hotel_itic_client,hotel_itic.client,model_hotel_itic_client,base.group_user,1,1,1,1

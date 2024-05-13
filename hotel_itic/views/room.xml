@@ -1,0 +1,49 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="hotel_itic.room_action">
+      <field name="name">Room Action</field>
+      <field name="res_model">hotel_itic.room</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="hotel_itic.room_list">
+      <field name="name">Room List</field>
+      <field name="model">hotel_itic.room</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="hasTv"/>
+          <field name="capacity"/>
+          <field name="floor"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record  model="ir.ui.view" id="hotel_itic.room_form">
+      <field name="name">Room Form</field>
+      <field name="model">hotel_itic.room</field>
+      <field name="arch" type="xml">
+        <form string="Room Form">
+          <sheet>
+            <group name="grup1">
+              <field name="name"/>
+              <field name="hasTv"/>
+              <field name="capacity"/>
+              <field name="clients_ids">
+                <tree>
+                  <field name="name"/>
+                  <field name="dni"/>
+                  <field name="birthday"/>
+                </tree>
+              </field>
+              <field name="floor"/>
+            </group>
+          </sheet>
+        </form> 
+      </field>
+    </record>
+
+
+    
+  </data>
+</odoo>
